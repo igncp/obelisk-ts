@@ -5,10 +5,10 @@ export class PyramidColor extends AbstractColor {
   public static BRIGHTNESS_GAIN: number = -20;
 
   constructor(
-    border: number,
-    borderHighlight: number,
-    left: number,
-    right: number,
+    border?: number,
+    borderHighlight?: number,
+    left?: number,
+    right?: number,
   ) {
     super();
     this.border = ColorGeom.get32(border === undefined ? 0x949698 : border);

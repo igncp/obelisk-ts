@@ -3,7 +3,8 @@ import { AbstractColor } from "./AbstractColor";
 
 export class SideColor extends AbstractColor {
   static BRIGHTNESS_GAIN: number = -20;
-  constructor(border: number, inner: number) {
+
+  constructor(border?: number, inner?: number) {
     super();
     this.border = ColorGeom.get32(border === undefined ? 0x878787 : border);
     this.inner = ColorGeom.get32(inner === undefined ? 0xeeeeee : inner);

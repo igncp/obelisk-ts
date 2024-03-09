@@ -1,4 +1,4 @@
-export class AbstractDimension {
+export abstract class AbstractDimension {
   /**
    * Pyramid tall mode
    */

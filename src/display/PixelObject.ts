@@ -1,7 +1,7 @@
 import { Point3D } from "../geom/Point3D";
 
 // @TODO
-type Primitive = {
+export type Primitive = {
   canvas: any;
   matrix: any;
 };
