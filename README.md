@@ -1,17 +1,10 @@
-# Obelisk.js
+# Obelisk TS
 
-[![GitHub release](https://img.shields.io/github/release/nosir/obelisk.js.svg?maxAge=2592000)](https://github.com/nosir/obelisk.js)
+Obelisk TS is a TypeScript library for building isometric pixel objects. It was forked from https://github.com/nosir/obelisk.js .
 
-obelisk.js is a JavaScript library for building isometric pixel objects.
+With the simple and flexible API provided, you can easily add isometric pixel elements like brick, cube, pyramid and slope in HTML5 canvas. Obelisk TS strictly follows pixel neat pattern: lines with 1:2 pixel dot arrangement, leading to an angle of 22.6 degrees.
 
-With the simple and flexible API provided, you can easily add isometric pixel elements like brick, cube, pyramid and slope in HTML5 canvas. Obelisk.js strictly follows pixel neat pattern: lines with 1:2 pixel dot arrangement, leading to an angle of 22.6 degrees.
-
-Also you should know obelisk.js is not for vector isometric graphics drawing and rendering. Internally it does not use any canvas graphic drawing API, instead, it manipulates all the rendering in pixel level to obtain precise pixel arrangement. Just try it out to pixelate something. Have fun.
-
-<img width="112" height="109" src="http://nosir.github.io/obelisk.js/images/logo.png"/>
-
-## 1.2.0 Release
-The newest version is written by CommonJS style, which means you can easily use it in browserify project. [See details here](#development-browser)
+Also you should know obelisk TS is not for vector isometric graphics drawing and rendering. Internally it does not use any canvas graphic drawing API, instead, it manipulates all the rendering in pixel level to obtain precise pixel arrangement. Just try it out to pixelate something. Have fun.
 
 ## Showcase
 
@@ -34,16 +27,10 @@ User Contributed:
 
 ## Getting started
 
-Simply include obelisk.js in your project
-```html
-<script src="//path/to/obelisk.min.js"></script>
-```
+- WIP
 
 CDN url
-```html
-https://unpkg.com/obelisk.js@1.2.2/
-```
-In JavaScript
+
 ```javascript
 // create a canvas 2D point for pixel view world
 var point = new obelisk.Point(200, 200);
@@ -151,12 +138,6 @@ canvas.createPNGStream().pipe(fs.createWriteStream('./figure.png'));
 
 For more details, check the [Node.js Canvas example](https://github.com/pose/node-obelisk-example).
 
-## Get in Touch
-
-- Build any cool stuff? Please feel free to add it here: [User Contributed Showcase](https://github.com/nosir/obelisk.js/wiki/User-Contributed-Showcase)
-- Bugs & Suggestions: [open an issue](https://github.com/nosir/obelisk.js/issues)
-- Twitter: [@rison](https://twitter.com/rison)
-
 ## Changelog
 
 See details here: [release notes](https://github.com/nosir/obelisk.js/releases).
@@ -170,4 +151,4 @@ Pixel art is a form of digital art, where images are edited and displayed on the
 
 ## License
 
-Obelisk.js is released under the [MIT License](http://opensource.org/licenses/MIT)
+Obelisk TS is released under the [MIT License](http://opensource.org/licenses/MIT)
