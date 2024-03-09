@@ -1,7 +1,7 @@
 import { AbstractDimension } from "./AbstractDimension";
 
 export class LineXDimension extends AbstractDimension {
-  constructor(xAxis: number | undefined) {
+  constructor(xAxis?: number) {
     super();
 
     this.xAxis = xAxis || 30;

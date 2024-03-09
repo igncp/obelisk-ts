@@ -1,12 +1,12 @@
 import type { AbstractColor } from "../colors/AbstractColor";
 import { SideColor } from "../colors/SideColor";
 import type { AbstractDimension } from "../dimensions/AbstractDimension";
-import { SideYDimension } from "../dimensions/SideYDimension";
+import { BrickDimension } from "../dimensions/BrickDimension";
 import { BitmapData } from "../display/BitmapData";
 import { Matrix } from "../geom/Matrix";
 import { AbstractPrimitive } from "./AbstractPrimitive";
 
-export class SideY extends AbstractPrimitive {
+export class Brick extends AbstractPrimitive {
   constructor(
     dimension?: AbstractDimension,
     color?: AbstractColor,
@@ -22,31 +22,40 @@ export class SideY extends AbstractPrimitive {
   }
 
   private build() {
-    const xOffsetInner = 0;
-    const yOffsetInner = this.h - this.dimension.zAxis - 1;
-    const xOffsetOut = this.dimension.yAxis - 1;
-    const yOffsetOut = this.dimension.zAxis;
+    const xOffsetInner = this.dimension.yAxis - 2;
+    const yOffsetInner = 0;
+    const xOffsetOut = this.dimension.xAxis - 1;
+    const yOffsetOut = this.h - 1;
     const borderColor = this.border ? this.color.border : this.color.inner;
 
-    //y axis
-    for (let i = 0; i < this.dimension.yAxis; i += 1) {
+    //x axis
+    for (let i = 0; i < this.dimension.xAxis; i += 1) {
       this.bitmapData.setPixel(
         xOffsetInner + i,
-        yOffsetInner - Math.floor(i / 2),
+        yOffsetInner + Math.floor(i / 2),
         borderColor,
       );
 
       this.bitmapData.setPixel(
         xOffsetOut - i,
-        yOffsetOut + Math.floor(i / 2),
+        yOffsetOut - Math.floor(i / 2),
         borderColor,
       );
     }
 
-    //z axis
-    for (let j = 0; j < this.dimension.zAxis; j += 1) {
-      this.bitmapData.setPixel(xOffsetInner, yOffsetInner + j, borderColor);
-      this.bitmapData.setPixel(xOffsetOut, yOffsetOut - j, borderColor);
+    //y axis
+    for (let j = 0; j < this.dimension.yAxis; j += 1) {
+      this.bitmapData.setPixel(
+        xOffsetInner + 1 - j,
+        yOffsetInner + Math.floor(j / 2),
+        borderColor,
+      );
+
+      this.bitmapData.setPixel(
+        xOffsetOut - 1 + j,
+        yOffsetOut - Math.floor(j / 2),
+        borderColor,
+      );
     }
 
     //fill an pixel graphic enclosed
@@ -62,13 +71,17 @@ export class SideY extends AbstractPrimitive {
   }
 
   private initRectangle() {
-    this.w = this.dimension.yAxis;
-    this.h = this.dimension.zAxis + this.dimension.yAxis / 2;
+    this.w = this.dimension.xAxis + this.dimension.yAxis;
+    this.h = (this.dimension.xAxis + this.dimension.yAxis) / 2;
+
+    // 22.6 degrees implementation
+    this.w -= 2;
+    this.h -= 1;
 
     // the matrix offset between the bitmap and the 3d pixel coordinate ZERO point
     this.matrix = new Matrix();
     this.matrix.tx = -this.dimension.yAxis + 2;
-    this.matrix.ty = -this.dimension.zAxis;
+    this.matrix.ty = 0;
   }
 
   private initRender(
@@ -79,7 +92,7 @@ export class SideY extends AbstractPrimitive {
   ) {
     this.useDefaultCanvas = useDefaultCanvas || false;
     this.border = border || border === undefined;
-    this.dimension = dimension === undefined ? new SideYDimension() : dimension;
+    this.dimension = dimension === undefined ? new BrickDimension() : dimension;
     this.color = color === undefined ? new SideColor() : color;
   }
 
@@ -89,6 +102,6 @@ export class SideY extends AbstractPrimitive {
   }
 
   toString() {
-    return "[SideY]";
+    return "[Brick]";
   }
 }

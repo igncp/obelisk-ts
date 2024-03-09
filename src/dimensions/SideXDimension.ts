@@ -1,7 +1,7 @@
 import { AbstractDimension } from "./AbstractDimension";
 
 export class SideXDimension extends AbstractDimension {
-  constructor(xAxis: number | undefined, zAxis: number | undefined) {
+  constructor(xAxis?: number, zAxis?: number) {
     super();
     this.xAxis = xAxis || 30;
     this.zAxis = zAxis || 30;

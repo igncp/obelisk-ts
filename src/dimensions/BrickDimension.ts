@@ -1,7 +1,7 @@
 import { AbstractDimension } from "./AbstractDimension";
 
 export class BrickDimension extends AbstractDimension {
-  constructor(xAxis: number | undefined, yAxis: number | undefined) {
+  constructor(xAxis?: number, yAxis?: number) {
     super();
     this.xAxis = xAxis || 30;
     this.yAxis = yAxis || 30;

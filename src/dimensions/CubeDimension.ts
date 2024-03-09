@@ -1,11 +1,7 @@
 import { AbstractDimension } from "./AbstractDimension";
 
 export class CubeDimension extends AbstractDimension {
-  constructor(
-    xAxis: number | undefined,
-    yAxis: number | undefined,
-    zAxis: number | undefined,
-  ) {
+  constructor(xAxis?: number, yAxis?: number, zAxis?: number) {
     super();
 
     this.xAxis = xAxis || 30;

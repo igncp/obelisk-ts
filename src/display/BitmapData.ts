@@ -5,7 +5,7 @@ export class BitmapData {
   context: CanvasRenderingContext2D;
   imageData: ImageData;
 
-  constructor(w: number, h: number, useDefaultCanvas: boolean) {
+  constructor(w: number, h: number, useDefaultCanvas?: boolean) {
     if (w === undefined || h === undefined) {
       throw new Error("BitmapData width or height is missing");
     }
@@ -19,7 +19,7 @@ export class BitmapData {
     this.canvas.setAttribute("width", w.toString());
     this.canvas.setAttribute("height", h.toString());
 
-    this.context = this.canvas.getContext("2d");
+    this.context = this.canvas.getContext("2d")!;
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
     this.context.imageSmoothingEnabled = false;
