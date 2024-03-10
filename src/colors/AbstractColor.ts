@@ -2,42 +2,42 @@ export class AbstractColor {
   /**
    * The border colors for elements of certain primitive
    */
-  border: number = null;
+  border!: number;
 
   /**
    * The borderHighlight colors for elements of certain primitive
    */
-  borderHighlight: number = null;
+  borderHighlight!: number;
 
   /**
    * The horizontal colors for elements of certain primitive
    */
-  horizontal: number = null;
+  horizontal!: number;
 
   /**
    * The inner colors for elements of certain primitive
    */
-  inner: number = null;
+  inner!: number;
 
   /**
    * The left side colors for elements of certain primitive
    */
-  left: number = null;
+  left!: number;
 
   /**
    * The left slot side colors for elements of certain primitive
    */
-  leftSlope: number = null;
+  leftSlope!: number;
 
   /**
    * The right side colors for elements of certain primitive
    */
-  right: number = null;
+  right!: number;
 
   /**
    * The right slot side colors for elements of certain primitive
    */
-  rightSlope: number = null;
+  rightSlope!: number;
 
   toString() {
     return "[AbstractColor]";

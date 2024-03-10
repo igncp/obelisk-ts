@@ -4,8 +4,9 @@
     "allowSyntheticDefaultImports": true,
     "module": "es6",
     "noImplicitAny": true,
+    "skipLibCheck": true,
     "strict": true,
     "target": "es5"
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
 }

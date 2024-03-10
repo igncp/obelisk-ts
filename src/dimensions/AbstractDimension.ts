@@ -2,22 +2,22 @@ export abstract class AbstractDimension {
   /**
    * Pyramid tall mode
    */
-  tall: boolean = false;
+  tall!: boolean;
 
   /**
    * The x Axis dimensions in 22.6 degrees coordinate
    */
-  xAxis: number = null;
+  xAxis!: number;
 
   /**
    * The y Axis dimensions in 22.6 degrees coordinate
    */
-  yAxis: number = null;
+  yAxis!: number;
 
   /**
    * The z Axis dimensions in 22.6 degrees coordinate
    */
-  zAxis: number = null;
+  zAxis!: number;
 
   toString() {
     return "[AbstractDimension]";

@@ -150,8 +150,8 @@ export class Pyramid extends AbstractPrimitive {
   }
 
   initRender(
-    dimension: PyramidDimension | undefined,
-    color?: PyramidColor,
+    dimension: AbstractDimension | undefined,
+    color?: AbstractColor,
     border?: boolean,
     useDefaultCanvas?: boolean,
   ) {

@@ -15,7 +15,7 @@ export class PixelView {
 
     this.canvas = canvas;
 
-    this.context = this.canvas.getContext("2d");
+    this.context = this.canvas.getContext("2d")!;
     this.context.imageSmoothingEnabled = false;
 
     this.point = point || new Point(0, 0);

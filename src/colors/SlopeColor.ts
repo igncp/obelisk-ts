@@ -2,7 +2,7 @@ import { ColorGeom } from "../utils/ColorGeom";
 import { AbstractColor } from "./AbstractColor";
 
 export class SlopeColor extends AbstractColor {
-  public static BRIGHTNESS_GAIN: number = -20;
+  public BRIGHTNESS_GAIN: number = -20;
 
   constructor(
     border: number = 0x949698,
@@ -36,7 +36,7 @@ export class SlopeColor extends AbstractColor {
    * you can assign the same horizontal color as cube
    * so that you will be able to arrange the slope with cube
    */
-  static getByHorizontalColor(horizontal: number): SlopeColor {
+  getByHorizontalColor(horizontal: number): SlopeColor {
     return new SlopeColor(
       ColorGeom.applyBrightness(horizontal, this.BRIGHTNESS_GAIN * 4),
       //apply hightlight

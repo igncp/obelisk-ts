@@ -1,7 +1,7 @@
 import { AbstractDimension } from "./AbstractDimension";
 
 export class SlopeDimension extends AbstractDimension {
-  constructor(xAxis: number | undefined, yAxis: number | undefined) {
+  constructor(xAxis?: number, yAxis?: number) {
     super();
 
     this.xAxis = xAxis || 30;

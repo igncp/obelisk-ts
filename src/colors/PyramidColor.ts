@@ -2,7 +2,7 @@ import { ColorGeom } from "../utils/ColorGeom";
 import { AbstractColor } from "./AbstractColor";
 
 export class PyramidColor extends AbstractColor {
-  public static BRIGHTNESS_GAIN: number = -20;
+  public BRIGHTNESS_GAIN: number = -20;
 
   constructor(
     border?: number,
@@ -21,7 +21,7 @@ export class PyramidColor extends AbstractColor {
     this.right = ColorGeom.get32(right === undefined ? 0xeeeff0 : right);
   }
 
-  static getByRightColor(right: number) {
+  getByRightColor(right: number) {
     return new PyramidColor(
       ColorGeom.applyBrightness(right, this.BRIGHTNESS_GAIN * 4),
       ColorGeom.applyBrightness(right, 0, true),

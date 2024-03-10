@@ -2,7 +2,7 @@ import { ColorGeom } from "../utils/ColorGeom";
 import { AbstractColor } from "./AbstractColor";
 
 export class CubeColor extends AbstractColor {
-  public static BRIGHTNESS_GAIN: number = -20;
+  public BRIGHTNESS_GAIN: number = -20;
 
   constructor(
     public border: number = 0x878787,
@@ -27,9 +27,9 @@ export class CubeColor extends AbstractColor {
     );
   }
 
-  public static getByHorizontalColor(horizontal: number): CubeColor {
+  public getByHorizontalColor(horizontal: number): CubeColor {
     return new CubeColor(
-      ColorGeom.applyBrightness(horizontal, CubeColor.BRIGHTNESS_GAIN * 4),
+      ColorGeom.applyBrightness(horizontal, this.BRIGHTNESS_GAIN * 4),
       ColorGeom.applyBrightness(horizontal, 0, true),
       ColorGeom.applyBrightness(horizontal, this.BRIGHTNESS_GAIN * 2),
       ColorGeom.applyBrightness(horizontal, this.BRIGHTNESS_GAIN),
