@@ -77,23 +77,7 @@ pixelView.renderObject(cube);
     - Flexible Cube: https://igncp.github.io/obelisk-ts/demo/advanced/flexible-cube
     - Input Text Rendering: https://igncp.github.io/obelisk-ts/demo/advanced/input-text-rendering
 
-## Development (Browser)
-
-### Browserify
-
-Obelisk.js can be used from [browserify](https://github.com/substack/node-browserify) project. Simply:
-
-```sh
-$ npm install obelisk.js
-```
-
-In your JavaScript
-
-```javascript
-var obelisk = require("obelisk.js");
-
-// Now you can do the same as above
-```
+## Development
 
 ### Want to build the project locally?
 
@@ -107,43 +91,6 @@ Build
 ```
 $ npm run build
 ```
-
-## Advanced Usage (Node.js)
-
-### Node.js
-
-Also you can use it in your Node.js canvas project
-
-> As node.js `canvas` dependency can be tricky to install (binary dependency on Cairo) we are not adding it as a project dependency. You will need to add the `canvas` dependency explicitly on your project:
-
-```sh
-$ npm install canvas
-```
-
-```sh
-$ npm install obelisk.js
-```
-
-In your JavaScript
-
-```js
-// load Node Canvas dependency
-var Canvas = require("canvas");
-
-// load obelisk.js module
-// here we need the Canvas as a module parameter
-var obelisk = require("obelisk.js")(Canvas);
-
-// create a Node Canvas instance
-var canvas = new Canvas(600, 450);
-
-// Use obelisk the same way you will use it in the browser ...
-
-// Save canvas to a file
-canvas.createPNGStream().pipe(fs.createWriteStream("./figure.png"));
-```
-
-For more details, check the [Node.js Canvas example](https://github.com/pose/node-obelisk-example).
 
 ## References
 
