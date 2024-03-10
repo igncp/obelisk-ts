@@ -53,26 +53,29 @@ var cube = new obelisk.Cube(dimension, color, true);
 pixelView.renderObject(cube);
 ```
 
-For more details, check the tutorial [part 1](https://github.com/nosir/obelisk.js/wiki/Tutorial-Part-1%3A-To-build-the-first-cube): To build the first cube, or [try the code yourself](http://jsfiddle.net/nosir/ygWEW/)
+## Tutorials
 
-## Original Tutorials
+-   Part 1: [To build the first cube](./docs/01-first-cube.md)
+-   Part 2: [Coordinate system](./docs/02-coordinate-system.md)
+-   Part 3: [Primitives](./docs/03-primitives.md)
+-   Part 4: [Color](./docs/04-color.md)
+-   Part 5: [Dimension](./docs/05-dimension.md)
 
-Step by step:
+### Current examples in the repo
 
--   Part 1: [To build the first cube](https://github.com/nosir/obelisk.js/wiki/Tutorial-Part-1%3A-To-build-the-first-cube)
--   Part 2: [Coordinate system](https://github.com/nosir/obelisk.js/wiki/Tutorial-Part-2%3A-Coordinate-system)
--   Part 3: [Primitives](https://github.com/nosir/obelisk.js/wiki/Tutorial-Part-3%3A-Primitives)
--   Part 4: [Color](https://github.com/nosir/obelisk.js/wiki/Tutorial-Part-4%3A-Color)
--   Part 5: [Dimension](https://github.com/nosir/obelisk.js/wiki/Tutorial-Part-5%3A-Dimension)
+- Basic:
+    - Brick: https://igncp.github.io/obelisk-ts/demo/primary/brick
+    - Cube: https://igncp.github.io/obelisk-ts/demo/primary/cube
+    - Line: https://igncp.github.io/obelisk-ts/demo/primary/line
+    - Slope: https://igncp.github.io/obelisk-ts/demo/primary/slope
+    - Pyramid: https://igncp.github.io/obelisk-ts/demo/primary/pyramid
+    - Side: https://igncp.github.io/obelisk-ts/demo/primary/side
 
-Sample code for building all primitives:
-
--   Cube: http://jsfiddle.net/nosir/ygWEW/
--   Pyramid : http://jsfiddle.net/nosir/ZVURu/
--   LineX, LineY, LineZ: http://jsfiddle.net/nosir/gnbqwr2L/
--   Brick: http://jsfiddle.net/nosir/6MuVr/
--   SideX, SideY: http://jsfiddle.net/nosir/bLsew/
--   SlopeNorth, SlopeEast, SlopeSouth, SlopeEast: http://jsfiddle.net/nosir/28B9G/
+- Advanced:
+    - Gif Rendering: https://igncp.github.io/obelisk-ts/demo/advanced/gif-rendering
+    - Flappy Bird: https://igncp.github.io/obelisk-ts/demo/advanced/flappy-bird
+    - Flexible Cube: https://igncp.github.io/obelisk-ts/demo/advanced/flexible-cube
+    - Input Text Rendering: https://igncp.github.io/obelisk-ts/demo/advanced/input-text-rendering
 
 ## Development (Browser)
 
@@ -95,20 +98,14 @@ var obelisk = require("obelisk.js");
 ### Want to build the project locally?
 
 ```
-$ git clone https://github.com/nosir/obelisk.js.git
+$ git clone https://github.com/igncp/obelisk-ts.git
 $ npm install
 ```
 
 Build
 
 ```
-$ gulp build
-```
-
-Develop
-
-```
-$ gulp browserify:watch
+$ npm run build
 ```
 
 ## Advanced Usage (Node.js)

@@ -27,7 +27,7 @@
   ],
   "version": "1.0.0",
   "license": "MIT",
-  "bugs": "https://github.com/nosir/igncp/issues",
+  "bugs": "https://github.com/igncp/obelisk-ts/issues",
   "homepage": "https://github.com/igncp/obelisk-js",
   "docs": "https://github.com/igncp/obelisk-ts/blob/master/README.md",
   "devDependencies": {
